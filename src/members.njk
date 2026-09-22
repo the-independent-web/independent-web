@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: Members
+permalink: /members/
+---
+
+<h3>Members</h3>
+
+<h4>
+    <i>people building and exploring the independent web</i>
+</h4>
+
+<div class="grid grid-2">
+
+    {% for member in members %}
+
+    <div class="card">
+        <b>{{ member.name }}</b><br>
+        <i>{{ member.role }}</i>
+
+        {% if member.about %}
+            <br>
+            {{ member.about }}
+        {% endif %}
+
+        {% if member.website %}
+            <br>
+            <a href="{{ member.website }}">[ website ]</a>
+        {% endif %}
+    </div>
+
+    {% endfor %}
+
+</div>
+
+<div class="card">
+    <b>Want to be here?</b><br>
+    Have a website, project, or something you're building?
+    <a href="{{ site.discord }}">[ join the community ]</a>
+</div>

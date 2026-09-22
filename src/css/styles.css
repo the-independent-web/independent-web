@@ -1,0 +1,162 @@
+:root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+
+body {
+    background-color: #11100e;
+    margin: auto;
+    margin-top: 40px;
+    font-family: monospace !important;
+    color: #e8e1d5;
+    max-width: 900px;
+    padding: 0 10px;
+    line-height: 1.55;
+}
+
+h1,
+h3 {
+    color: #e6b566;
+    text-align: center;
+}
+
+h2,
+h4 {
+    color: #c9b99a;
+    text-align: center;
+}
+
+a,
+a:visited {
+    color: #8bb8d9;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e6b566;
+    text-decoration: underline;
+}
+
+pre,
+code,
+b,
+strong {
+    color: #e6b566;
+    overflow: auto;
+}
+
+i,
+em,
+blockquote {
+    color: #b8aa93;
+}
+
+hr {
+    border: 0;
+    border-top: 5px dashed;
+    color: #51483c;
+}
+
+hr.smaller {
+    border: 0;
+    border-top: 2px dashed;
+    color: #51483c;
+}
+
+div {
+    border: 1px solid #6b6255;
+    padding: 10px;
+}
+
+div.card {
+    word-wrap: break-word;
+    background-color: #15130f;
+}
+
+table {
+    width: 100%;
+    padding: 3px;
+}
+
+td,
+span {
+    text-align: center;
+}
+
+.wrap {
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 60px;
+}
+
+.links-line a {
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.no-border {
+    border: none !important;
+    padding: 0 !important;
+}
+
+.nav {
+    text-align: center;
+    margin: 18px 0 30px;
+}
+
+.nav a {
+    margin: 0 8px;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid #6b6255;
+    padding: 2px 7px;
+    margin: 3px;
+    color: #c9b99a;
+}
+
+.tag:hover {
+    border-color: #e6b566;
+    color: #e6b566;
+}
+
+.hero {
+    border-color: #e6b566;
+    background: #17140f;
+}
+
+.quote {
+    border-left: 4px solid #e6b566;
+    padding-left: 14px;
+    margin: 18px 0;
+}
+
+.grid {
+    display: grid;
+    gap: 10px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 600px) {
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}

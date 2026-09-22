@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ title }} | {{ site.title }}</title>
+
+  <meta name="description" content="{{ site.description }}">
+
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <header>
+      <h1>
+        <a href="/">{{ site.title }}</a>
+      </h1>
+
+      <nav class="nav no-border">
+        <a href="/">[home]</a>
+        <a href="/blog/">[blog]</a>
+        <a href="/members/">[members]</a>
+        <a href="/about/">[about]</a>
+      </nav>
+    </header>
+
+    <hr>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <hr>
+
+    <footer class="no-border" style="text-align: center;">
+      <p>
+        <b>{{ site.title }}</b><br>
+        <i>{{ site.footer }}</i>
+      </p>
+
+      <p>
+        &copy; {{ site.year }} {{ site.title }}
+      </p>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>

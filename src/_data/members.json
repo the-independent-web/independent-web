@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Alex",
+    "role": "Member",
+    "website": "https://example.com",
+    "about": "Building small things for the web."
+  },
+  {
+    "name": "Sam",
+    "role": "Member",
+    "website": "https://example.org",
+    "about": "Writer, developer, and web explorer."
+  },
+  {
+    "name": "Jamie",
+    "role": "Member",
+    "website": "https://example.net",
+    "about": "Exploring the independent web."
+  }
+]

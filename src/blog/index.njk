@@ -1,0 +1,51 @@
+---
+layout: base.njk
+title: Blog
+permalink: /blog/
+---
+
+<h3>Blog</h3>
+
+<h4>
+    <i>thoughts, ideas, projects, and things worth sharing</i>
+</h4>
+
+{% for post in collections.posts %}
+
+<div class="card" style="display: flex; gap: 15px; align-items: flex-start;">
+
+    {% if post.data.image %}
+        <a href="{{ post.url }}" style="flex-shrink: 0;">
+            <img
+                src="{{ post.data.image }}"
+                alt="{{ post.data.title }}"
+                width="140"
+                height="90"
+                style="object-fit: cover;"
+            >
+        </a>
+    {% endif %}
+
+    <div class="no-border" style="padding: 0; border: none;">
+
+        <b>
+            <a href="{{ post.url }}">
+                {{ post.data.title }}
+            </a>
+        </b>
+
+        {% if post.data.description %}
+            <p>
+                {{ post.data.description }}
+            </p>
+        {% endif %}
+
+        <small>
+            {{ post.date | date }}
+        </small>
+
+    </div>
+
+</div>
+
+{% endfor %}
