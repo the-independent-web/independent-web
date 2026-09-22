@@ -160,3 +160,32 @@ span {
         grid-template-columns: 1fr;
     }
 }
+
+button {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #e6b566;
+    background: #e6b566;
+    color: #11100e;
+    font-family: monospace;
+    font-size: inherit;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+button:hover {
+    background: #11100e;
+    color: #e6b566;
+}
+
+button.outline {
+    background: transparent;
+    color: #e6b566;
+    border-color: #6b6255;
+}
+
+button.outline:hover {
+    background: #e6b566;
+    color: #11100e;
+    border-color: #e6b566;
+}
