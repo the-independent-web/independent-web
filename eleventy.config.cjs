@@ -1,6 +1,11 @@
+const { dateToRfc822 } = require("@11ty/eleventy-plugin-rss");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/images");
+
+  // Register the RFC-822 date filter directly (used in feed.njk)
+  eleventyConfig.addFilter("dateToRfc822", dateToRfc822);
 
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 

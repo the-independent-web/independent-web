@@ -1,0 +1,27 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>The Independent Web</title>
+        <link>https://theindependentweb.com/</link>
+        <atom:link href="https://theindependentweb.com/feed.xml" rel="self" type="application/rss+xml" />
+        <description>Websites, RSS, decentralization, open source, privacy, and the independent web.</description>
+        <language>en</language>
+        {%- for post in collections.posts %}
+        <item>
+            <title>{{ post.data.title }}</title>
+            <link>https://theindependentweb.com{{ post.url }}</link>
+            <description>{{ post.data.description }}</description>
+            {%- if post.data.image %}
+            <enclosure url="https://theindependentweb.com{{ post.data.image }}" type="image/png" length="0" />
+            {%- endif %}
+            <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+            <dc:creator>{{ post.data.author or "The Independent Web" }}</dc:creator>
+            <guid>https://theindependentweb.com{{ post.url }}</guid>
+        </item>
+        {%- endfor %}
+    </channel>
+</rss>
