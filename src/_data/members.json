@@ -1,20 +1,23 @@
 [
   {
+    "id": "member_001",
+    "username": "alex",
     "name": "Alex",
-    "role": "Member",
-    "website": "https://example.com",
+    "role": "MEMBER",
     "about": "Building small things for the web."
   },
   {
+    "id": "member_002",
+    "username": "sam",
     "name": "Sam",
-    "role": "Member",
-    "website": "https://example.org",
+    "role": "MEMBER",
     "about": "Writer, developer, and web explorer."
   },
   {
+    "id": "member_003",
+    "username": "jamie",
     "name": "Jamie",
-    "role": "Member",
-    "website": "https://example.net",
+    "role": "MEMBER",
     "about": "Exploring the independent web."
   }
 ]

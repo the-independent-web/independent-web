@@ -1,0 +1,29 @@
+---
+layout: base.njk
+---
+
+{% if image %}
+<p style="text-align: center;">
+    <img src="{{ image }}" alt="{{ title }}" style="max-width: 100%; height: auto;">
+</p>
+{% endif %}
+
+{% if author or date %}
+<p>
+    <i>
+        {% if author %}
+        By {{ author }}
+        {% endif %}
+
+        {% if author and date %}
+        ·
+        {% endif %}
+
+        {% if date %}
+        {{ date | date }}
+        {% endif %}
+    </i>
+</p>
+{% endif %}
+
+{{ content | safe }}

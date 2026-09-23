@@ -1,0 +1,106 @@
+[
+    {
+        "name": "Alex's Web Garden",
+        "slug": "alex",
+        "description": "A collection of interesting places I discover around the web.",
+        "author": "Alex",
+        "links": [
+            {
+                "name": "Tinkerer's Notebook",
+                "url": "https://example.com",
+                "description": "Notes about electronics, programming, hardware experiments, and things I'm building.",
+                "added": "2026-09-20"
+            },
+            {
+                "name": "Open Source Corner",
+                "url": "https://example.org",
+                "description": "A collection of open-source software, libraries, tools, and projects worth exploring.",
+                "added": "2026-09-18"
+            },
+            {
+                "name": "Small Web Journal",
+                "url": "https://example.net",
+                "description": "Thoughts about technology, the web, and building things independently.",
+                "added": "2026-09-15"
+            }
+        ]
+    },
+    {
+        "name": "Maya's Internet",
+        "slug": "maya",
+        "description": "Interesting websites, blogs, and resources I've found over the years.",
+        "author": "Maya",
+        "links": [
+            {
+                "name": "Digital Garden",
+                "url": "https://garden.example",
+                "description": "A growing collection of notes, ideas, references, and unfinished thoughts.",
+                "added": "2026-09-21"
+            },
+            {
+                "name": "RSS Everything",
+                "url": "https://rss.example",
+                "description": "Resources for discovering and following websites through RSS.",
+                "added": "2026-09-19"
+            },
+            {
+                "name": "Web Archive",
+                "url": "https://archive.example",
+                "description": "Interesting old websites, forgotten projects, and pieces of web history.",
+                "added": "2026-09-14"
+            }
+        ]
+    },
+    {
+        "name": "Ravi's Links",
+        "slug": "ravi",
+        "description": "A personal directory of software, privacy tools, and useful projects.",
+        "author": "Ravi",
+        "links": [
+            {
+                "name": "Privacy Tools",
+                "url": "https://privacy.example",
+                "description": "Privacy-friendly tools and resources for taking more control over your digital life.",
+                "added": "2026-09-22"
+            },
+            {
+                "name": "Free Software List",
+                "url": "https://freesoftware.example",
+                "description": "Free and open-source alternatives to popular proprietary applications and online services.",
+                "added": "2026-09-17"
+            },
+            {
+                "name": "Home Server Lab",
+                "url": "https://server.example",
+                "description": "Experiments with self-hosting, home servers, networking, and running services independently.",
+                "added": "2026-09-12"
+            }
+        ]
+    },
+    {
+        "name": "Nina's Web Finds",
+        "slug": "nina",
+        "description": "Small and interesting corners of the independent web.",
+        "author": "Nina",
+        "links": [
+            {
+                "name": "The Indie Web Guide",
+                "url": "https://indieweb.example",
+                "description": "Resources for creating personal websites and publishing independently.",
+                "added": "2026-09-23"
+            },
+            {
+                "name": "Alternative Networks",
+                "url": "https://networks.example",
+                "description": "Exploring decentralized, federated, and peer-to-peer ways of connecting people.",
+                "added": "2026-09-16"
+            },
+            {
+                "name": "Personal Web Ring",
+                "url": "https://webring.example",
+                "description": "A collection of personal websites connected through a small web ring.",
+                "added": "2026-09-10"
+            }
+        ]
+    }
+]

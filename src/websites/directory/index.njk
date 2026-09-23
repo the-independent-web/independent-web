@@ -1,0 +1,53 @@
+---
+layout: base.njk
+
+pagination:
+    data: websites
+    size: 1
+    alias: directory
+
+permalink: "/websites/directory/{{ directory.slug }}/"
+
+eleventyComputed:
+    title: "{{ directory.name | replace(\"'\", \"\") | replace(\"&\", \"and\") }}"
+---
+
+<h3>{{ directory.name }}</h3>
+
+<h4>
+    <i>{{ directory.description }}</i>
+</h4>
+
+<div class="directory">
+
+    {% for website in directory.links %}
+
+    <div class="directory-item">
+        <b>{{ loop.index }}.</b>
+
+        <span class="directory-content">
+            <a href="{{ website.url }}" target="_blank" rel="noopener">
+                <b>{{ website.name }}</b>
+            </a>
+
+            <span class="directory-description">
+                - {{ website.description }}
+            </span>
+        </span>
+
+        {% if website.added %}
+            <small class="directory-date">Added {{ website.added }}</small>
+        {% endif %}
+    </div>
+
+    {% endfor %}
+
+</div>
+
+<br>
+
+<div class="links-line no-border">
+    <a href="/websites/">
+        &lt;&lt; All Directories
+    </a>
+</div>

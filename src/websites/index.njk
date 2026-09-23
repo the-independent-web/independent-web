@@ -1,0 +1,46 @@
+---
+layout: base.njk
+title: Web Directory
+---
+
+<div class="hero">
+    <p>
+        <b>Web Directories</b>
+    </p>
+
+    <p>
+        Discover collections of personal websites, blogs, projects,
+        digital gardens, and other interesting places across the web.
+    </p>
+</div>
+
+<h3>Web Directories</h3>
+<h4><i>collections curated by people across the independent web</i></h4>
+
+<div class="directory">
+
+    {% for directory in websites %}
+
+    <div class="directory-item">
+
+        <b>{{ loop.index }}.</b>
+
+        <span class="directory-content">
+            <a href="directory/{{ directory.slug }}/">
+                <b>{{ directory.name }}</b>
+            </a>
+
+            <span class="directory-description">
+                - {{ directory.description }}
+            </span>
+        </span>
+
+        {% if directory.author %}
+            <i class="directory-author">by {{ directory.author }}</i>
+        {% endif %}
+
+    </div>
+
+    {% endfor %}
+
+</div>

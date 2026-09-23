@@ -1,27 +1,13 @@
 ---
-layout: base.njk
+layout: blog.njk
 title: Welcome to The Independent Web
 description: Why we're building a community around the independent web.
 date: 2026-09-22
-author: The Independent Web
+author: alex
 image: /images/blog/independent-web.png
 ---
 
 # Welcome to The Independent Web
-
-<p style="text-align: center;">
-    <img
-        src="{{ image }}"
-        alt="The Independent Web"
-        style="max-width: 100%; height: auto;"
-    >
-</p>
-
-<p>
-    <i>
-        By {{ author }} · {{ date | date }}
-    </i>
-</p>
 
 The web is more interesting when everyone has a place of their own.
 
