@@ -12,18 +12,14 @@ permalink: /blog/
 
 {% for post in collections.posts %}
 
+{% set author = members | findById(post.data.authorId) %}
+
 <div class="card" style="display: flex; gap: 15px; align-items: flex-start;">
 
     {% if post.data.image %}
-        <a href="{{ post.url }}" style="flex-shrink: 0;">
-            <img
-                src="{{ post.data.image }}"
-                alt="{{ post.data.title }}"
-                width="140"
-                height="90"
-                style="object-fit: cover;"
-            >
-        </a>
+    <a href="{{ post.url }}" style="flex-shrink: 0;">
+        <img src="{{ post.data.image }}" alt="{{ post.data.title }}" width="140" height="90" style="object-fit: cover;">
+    </a>
     {% endif %}
 
     <div class="no-border" style="padding: 0; border: none;">
@@ -35,13 +31,17 @@ permalink: /blog/
         </b>
 
         {% if post.data.description %}
-            <p>
-                {{ post.data.description }}
-            </p>
+        <p>
+            {{ post.data.description }}
+        </p>
         {% endif %}
 
         <small>
             {{ post.date | date }}
+
+            {% if author %}
+            · By {{ author.name }}
+            {% endif %}
         </small>
 
     </div>
@@ -52,13 +52,7 @@ permalink: /blog/
 
 <div class="no-border" style="display: flex; align-items: center; gap: 10px; margin-top: 20px;">
     <a href="/feed.xml" title="Subscribe via RSS">
-        <img
-            src="/images/icons/rss.png"
-            alt="RSS"
-            width="20"
-            height="20"
-            style="display: block;"
-        >
+        <img src="/images/icons/rss.png" alt="RSS" width="20" height="20" style="display: block;">
     </a>
 
     <strong>

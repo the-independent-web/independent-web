@@ -3,7 +3,7 @@ layout: blog.njk
 title: Welcome to The Independent Web
 description: Why we're building a community around the independent web.
 date: 2026-09-22
-author: alex
+authorId: member_001
 image: /images/blog/independent-web.png
 ---
 

@@ -8,22 +8,16 @@ layout: base.njk
 </p>
 {% endif %}
 
-{% if author or date %}
+{% if authorId %}
+{% set author = members | selectattr("id", "equalto", authorId) | first %}
+
+{% if author %}
 <p>
     <i>
-        {% if author %}
-        By {{ author }}
-        {% endif %}
-
-        {% if author and date %}
-        ·
-        {% endif %}
-
-        {% if date %}
-        {{ date | date }}
-        {% endif %}
+        By {{ author.name }} · {{ date | date }}
     </i>
 </p>
+{% endif %}
 {% endif %}
 
 {{ content | safe }}

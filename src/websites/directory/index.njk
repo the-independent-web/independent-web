@@ -2,7 +2,7 @@
 layout: base.njk
 
 pagination:
-    data: websites
+    data: directories
     size: 1
     alias: directory
 
@@ -18,11 +18,18 @@ eleventyComputed:
     <i>{{ directory.description }}</i>
 </h4>
 
+{% if directory.author %}
+    <p>
+        <i>Curated by {{ directory.author.name }}</i>
+    </p>
+{% endif %}
+
 <div class="directory">
 
     {% for website in directory.links %}
 
     <div class="directory-item">
+
         <b>{{ loop.index }}.</b>
 
         <span class="directory-content">
@@ -36,8 +43,11 @@ eleventyComputed:
         </span>
 
         {% if website.added %}
-            <small class="directory-date">Added {{ website.added }}</small>
+            <small class="directory-date">
+                Added {{ website.added }}
+            </small>
         {% endif %}
+
     </div>
 
     {% endfor %}

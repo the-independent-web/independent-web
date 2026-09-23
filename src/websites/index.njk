@@ -15,17 +15,21 @@ title: Web Directory
 </div>
 
 <h3>Web Directories</h3>
-<h4><i>collections curated by people across the independent web</i></h4>
+
+<h4>
+    <i>collections curated by people across the independent web</i>
+</h4>
 
 <div class="directory">
 
-    {% for directory in websites %}
+    {% for directory in directories %}
 
     <div class="directory-item">
 
         <b>{{ loop.index }}.</b>
 
         <span class="directory-content">
+
             <a href="directory/{{ directory.slug }}/">
                 <b>{{ directory.name }}</b>
             </a>
@@ -33,10 +37,13 @@ title: Web Directory
             <span class="directory-description">
                 - {{ directory.description }}
             </span>
+
         </span>
 
         {% if directory.author %}
-            <i class="directory-author">by {{ directory.author }}</i>
+            <i class="directory-author">
+                by {{ directory.author.name }}
+            </i>
         {% endif %}
 
     </div>
